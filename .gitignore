@@ -221,3 +221,25 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---------------------------------------------------------------
+# Project-specific additions (AI-Architecture learning path)
+# ---------------------------------------------------------------
+# Secrets: never commit. Keep the example template.
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated outputs from exercises
+output/
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large or private source material (e.g. the roadmap PDF)
+*.pdf
