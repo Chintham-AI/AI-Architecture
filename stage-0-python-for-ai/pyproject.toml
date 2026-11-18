@@ -1,0 +1,48 @@
+[project]
+name = "stage0"
+version = "0.1.0"
+description = "Stage 0 - Python for AI: data handling, resilient API calls, Pydantic validation, FastAPI + pytest"
+readme = "README.md"
+authors = [
+    { name = "Chintham-AI", email = "chinthamreddy6@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.163.2",
+    "httpx>=0.28.1",
+    "pandas>=3.1.1",
+    "pydantic>=2.14.3",
+    "python-dotenv>=1.2.4",
+    "python-multipart>=0.0.34",
+    "uvicorn[standard]>=0.54.0",
+]
+
+# Console commands installed into the venv: `uv run expenses data/expenses.csv`
+[project.scripts]
+expenses = "stage0.expenses:main"
+fx = "stage0.fx_client:main"
+fx-async = "stage0.fx_async:main"
+invoices = "stage0.invoice:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+# Third-party deprecation inside fastapi.testclient; not our code.
+filterwarnings = ["ignore:Using `httpx` with `starlette.testclient`"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+# E/F = pyflakes+pycodestyle, I = import sorting, B = bugbear, UP = modern syntax
+select = ["E", "F", "I", "B", "UP"]

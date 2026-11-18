@@ -1,0 +1,28 @@
+[
+  {
+    "_label": "simple USD invoice",
+    "invoice_number": "INV-20431",
+    "supplier": "Acme Cloud Services",
+    "issue_date": "2026-11-01",
+    "due_date": "2026-12-01",
+    "currency": "USD",
+    "line_items": [
+      {"description": "GPU compute hours", "quantity": 10, "unit_price": "12.50"},
+      {"description": "Vector DB storage", "quantity": 1, "unit_price": "40.00"}
+    ],
+    "tax": "16.50",
+    "total": "181.50"
+  },
+  {
+    "_label": "lower-case currency and padded strings get normalised",
+    "invoice_number": "  INV-0099  ",
+    "supplier": "Northwind Data Ltd",
+    "issue_date": "2026-10-15",
+    "due_date": "2026-10-15",
+    "currency": "inr",
+    "line_items": [
+      {"description": "Annotation services", "quantity": "2.5", "unit_price": "1000"}
+    ],
+    "total": "2500.00"
+  }
+]

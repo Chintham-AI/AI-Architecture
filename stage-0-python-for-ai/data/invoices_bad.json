@@ -1,0 +1,43 @@
+[
+  {
+    "_label": "total does not add up (classic LLM extraction slip)",
+    "invoice_number": "INV-20432",
+    "supplier": "Acme Cloud Services",
+    "issue_date": "2026-11-01",
+    "due_date": "2026-12-01",
+    "currency": "USD",
+    "line_items": [{"description": "API credits", "quantity": 3, "unit_price": "100.00"}],
+    "total": "350.00"
+  },
+  {
+    "_label": "wrong types, bad pattern, unknown currency",
+    "invoice_number": "20433",
+    "supplier": "X",
+    "issue_date": "not-a-date",
+    "due_date": "2026-12-01",
+    "currency": "BTC",
+    "line_items": [{"description": "Consulting", "quantity": 0, "unit_price": "-5"}],
+    "total": "ten dollars"
+  },
+  {
+    "_label": "empty lines + hallucinated extra field (due-date rule NOT reported: 'after' validators only run once all fields are valid)",
+    "invoice_number": "INV-20434",
+    "supplier": "Contoso",
+    "issue_date": "2026-11-10",
+    "due_date": "2026-11-01",
+    "currency": "EUR",
+    "line_items": [],
+    "total": "0",
+    "confidence": 0.97
+  },
+  {
+    "_label": "fields all valid, but due date before issue date",
+    "invoice_number": "INV-20435",
+    "supplier": "Contoso",
+    "issue_date": "2026-11-10",
+    "due_date": "2026-11-01",
+    "currency": "EUR",
+    "line_items": [{"description": "Workshop", "quantity": 1, "unit_price": "900.00"}],
+    "total": "900.00"
+  }
+]

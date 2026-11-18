@@ -1,0 +1,13 @@
+date,category,description,amount,currency
+2026-11-01,Travel,Taxi to client site,42.50,USD
+2026-11-02,Meals,Team lunch,118.20,USD
+2026-11-03,Software,LLM API credits,250.00,USD
+2026-11-03,Travel,Flight to Bengaluru,612.00,USD
+2026-11-04,Meals,Coffee with stakeholder,9.80,USD
+2026-11-05,Software,Vector DB trial,0.00,USD
+2026-11-06,Training,Cloud AI certification voucher,165.00,USD
+2026-11-07,travel ,Hotel 2 nights,380.40,USD
+2026-11-08,Meals,Dinner,abc,USD
+2026-11-09,,Unknown receipt,25.00,USD
+2026-11-10,Software,GPU hours,74.35,USD
+2026-11-11,Training,Book: Designing ML Systems,48.99,USD
